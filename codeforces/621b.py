@@ -16,10 +16,6 @@ bishops = {tuple(map(lambda x: int(x) - 1, raw_input().split())) for _ in range(
 counts = defaultdict(int)
 
 
-top_left = (0, 0)
-top_right = (B, B)
-
-
 for (r, c) in bishops:
     top_lx, top_ly = (r - min(r, c), c - min(r, c))
     top_rx, top_ry = (r - min(r, B - c), c + min(r, B - c))
